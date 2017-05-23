@@ -178,7 +178,7 @@ public class Main extends AppCompatActivity {
                         double nx = dest.yLength * -1;
                         double ny = dest.xLength;
 
-                        double d = ((nx * ptx) + (ny * pty)) / ((Math.sqrt(nx * nx + ny * ny))); //clean up all this shit since half of it probably isn't needed
+                        double d = ((nx * ptx) + (ny * pty)) / ((Math.sqrt(nx * nx + ny * ny)));
                         double fp = ((dest.xLength * (ptx * -1)) + (dest.yLength * (pty * -1)));
                         fp = fp / (Math.sqrt(dest.xLength * dest.xLength + dest.yLength * dest.yLength));
                         fp = fp / (Math.sqrt(dest.xLength * dest.xLength + dest.yLength * dest.yLength));
