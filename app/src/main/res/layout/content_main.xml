@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.matthew.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/view3">
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <com.example.matthew.androidproject.CanvasView
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:id="@+id/view"
+        android:background="@drawable/a"
+        android:layout_below="@+id/view3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="67dp" />
+
+    <com.example.matthew.androidproject.CanvasView
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:id="@+id/view2"
+        android:background="@drawable/b"
+        android:layout_alignTop="@+id/view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:theme="@style/AppTheme.AppBarOverlay" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/toggleButton"
+        android:checked="false"
+        android:textOff="New"
+        android:textOn="Edit"
+        android:onClick="edit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Morph"
+        android:id="@+id/button"
+        android:onClick="morph"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/toggleButton"
+        android:layout_toEndOf="@+id/toggleButton" />
+
+    <ImageView
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+
+    <SeekBar
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:max="5"
+        android:indeterminate="false"
+        android:progress="0"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/view2"
+        android:layout_alignEnd="@+id/view2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/upFrame"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:nestedScrollingEnabled="true"
+        android:onClick="addFrame" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/upFrame"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:onClick="minusFrame" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="5"
+        android:id="@+id/fr"
+        android:layout_above="@+id/upFrame"
+        android:layout_alignRight="@+id/upFrame"
+        android:layout_alignEnd="@+id/upFrame" />
+
+</RelativeLayout>
